@@ -1,5 +1,11 @@
 package com.hackerrank.github.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.Entity;
+
+@Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Actor {
     private Long id;
     private String login;

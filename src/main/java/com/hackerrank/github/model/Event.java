@@ -1,7 +1,12 @@
 package com.hackerrank.github.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import javax.persistence.Entity;
 import java.sql.Timestamp;
 
+@Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Event {
     private Long id;
     private String type;
