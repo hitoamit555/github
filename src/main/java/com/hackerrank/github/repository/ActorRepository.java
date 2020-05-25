@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface ActorRepository  extends CrudRepository<Actor, Long> {
 
-    @Query("SELECT  act, (select count(evt.id) from Event evt where evt.actor.id = act.id) as act.totalEvents FROM Actor act order by totalEvents desc")
+    @Query(value="SELECT  act, (select count(evt.id) from Event evt where evt.actor.id = act.id) as act.totalEvents FROM Actor act order by totalEvents desc", nativeQuery=true)
     List<Actor> findActorsOrderByNumberEventsDesc();
 
     @Query("SELECT act FROM Actor act")
