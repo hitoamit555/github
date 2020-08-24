@@ -94,6 +94,80 @@ public class GithubApiRestController {
         return new ResponseEntity<List<Actor>>(actors, HttpStatus.OK);
     }
 
+
+
+    /*
+    interface A {
+
+default String m1(){
+	return "A";
+}
+
+}
+
+interface B {
+
+default String m1(){
+	return "B";
+}
+
+}
+
+class C implementes A,B { ---
+
+public Object m1()
+{
+return A.m1();
+}
+
+
+
+
+}
+
+ String[] names = {"abc", "pqr", "ghi", "plo", "zxd", "ads"};
+ Map mapNames = {"a":["abc", "ads"], "g": ["ghi"] , "p" : ["pqr","plo"]};
+
+ mapName=names.stream().collect(collector.toMap())
+
+ mapNames.stream().filter(x-> x.getValue())
+
+
+Q.3
+Get an api which takes id as a i/p and return data from db.
+
+
+@RestController
+
+@RequetMapping( value=/getData/{ID} method=RequestMetod.post)
+public List<employee> getData(@PathVarable String ID)
+return repo.findByID();
+
+}
+
+@Repsitory
+Interface repo imp Jparepose<Employee.classs,Integer>
+
+List<Employee> findByID();
+
+
+
+
+@Employee
+class Employee
+{
+@Id
+int id
+}
+
+
+
+
+
+
+
+    /*/
+
     /** Please find local test case passed result into comments
 
      2020-05-25 19:48:13.223  INFO 17232 --- [           main] c.h.github.HttpJsonDynamicUnitTest       : Started HttpJsonDynamicUnitTest in 18.66 seconds (JVM running for 22.109)
